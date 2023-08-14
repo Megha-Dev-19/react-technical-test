@@ -1,0 +1,114 @@
+/* we can use external libraries also like bootstrap, mui for desiging */
+/* I have saved all the classes in one file (since we only have one page), but we can separate them according to their screens and reusability*/
+
+body {
+    background-color: rgba(255, 241, 232, 1);
+    padding: 0;
+    margin: 0;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    align-content: start;
+}
+
+.bg-dot-left {
+    position: fixed;
+    background-position: -50% 90%;
+    background-image: url('../../public/graphics/Accent.svg');
+    background-repeat: no-repeat;
+    background-size: 300px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.bg-dot-right {
+    position: fixed;
+    background-image: url('../../public/graphics/Accent.svg');
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-position: 150% 5%;
+    width: 100vw;
+    height: 100vh;
+}
+
+@media only screen and (min-width: 600px) {
+    .review-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        align-content: start;
+    }
+
+    .bg-dot-left {
+        position: fixed;
+        background-position: -30% 90%;
+        background-image: url('../../public/graphics/Accent.svg');
+        background-repeat: no-repeat;
+        background-size: 500px;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .bg-dot-right {
+        position: fixed;
+        background-image: url('../../public/graphics/Accent.svg');
+        background-repeat: no-repeat;
+        background-size: 500px;
+        background-position: 130% 10%;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+@media only screen and (min-width: 1080px) {
+    .review-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        align-content: start;
+    }
+}
+
+.review-grid-container {
+    padding-block: 5rem;
+    padding-inline: 1.5rem;
+    z-index: 9999;
+    position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+    .review-grid-container {
+        display: flex;
+        padding-inline: 7rem;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        z-index: 9999;
+        position: relative;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.gap-2 {
+    gap: 1rem;
+}
+
+.review-card {
+    border: 0.1rem solid black;
+    background-color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    height: fit-content;
+}
+
+.items-center {
+    align-items: center;
+}
